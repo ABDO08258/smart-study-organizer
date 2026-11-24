@@ -1,0 +1,192 @@
+/* ===== عام ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Tahoma, Arial, sans-serif;
+  background: #f0f4f8;
+  color: #222;
+}
+
+header {
+  background: #2c5282;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+main {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 0 15px;
+}
+
+/* ===== البطاقات ===== */
+.card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+  margin-top: 0;
+  font-size: 18px;
+  color: #2c5282;
+}
+
+/* ===== النماذج والأزرار ===== */
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+input,
+select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  background: #2c5282;
+  color: #fff;
+  font-size: 14px;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #2a4365;
+}
+
+.delete-btn {
+  background: #c53030;
+}
+
+.delete-btn:hover {
+  background: #9b2c2c;
+}
+
+/* ===== المهام ===== */
+.task {
+  border-right: 6px solid #3182ce;
+  background: #ebf8ff;
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+}
+
+.task.soon {
+  border-right-color: #dd6b20;
+  background: #fffaf0;
+}
+
+.task.late {
+  border-right-color: #c53030;
+  background: #fff5f5;
+}
+
+.task.done {
+  border-right-color: #38a169;
+  background: #f0fff4;
+  text-decoration: line-through;
+  opacity: 0.8;
+}
+
+.task-actions {
+  margin-top: 8px;
+  display: flex;
+  gap: 6px;
+}
+
+/* ===== نسبة الإنجاز ===== */
+.progress-item {
+  margin-bottom: 10px;
+}
+
+.progress-bar {
+  background: #e2e8f0;
+  border-radius: 10px;
+  height: 14px;
+  overflow: hidden;
+  margin-top: 4px;
+}
+
+.progress-fill {
+  background: #38a169;
+  height: 100%;
+  transition: width 0.3s;
+}
+
+/* ===== التنبيهات ===== */
+#alert-box {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.alert {
+  background: #fefcbf;
+  border: 1px solid #d69e2e;
+  color: #744210;
+  padding: 10px 15px;
+  margin: 8px 15px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ===== مؤقت بومودورو ===== */
+#pomodoro {
+  text-align: center;
+}
+
+#pomoTime {
+  font-size: 52px;
+  font-weight: bold;
+  color: #2c5282;
+}
+
+#pomoMode {
+  margin-bottom: 10px;
+  color: #555;
+}
+
+/* ===== البحث والفلترة ===== */
+#filterBar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+#searchBox {
+  flex: 1;
+  min-width: 180px;
+}
+
+#exportBtn {
+  margin-top: 10px;
+  background: #38a169;
+}
+
+#exportBtn:hover {
+  background: #2f855a;
+}

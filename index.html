@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مُنظِّم الدراسة الذكي</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>📚 مُنظِّم الدراسة الذكي</h1>
+  </header>
+
+  <!-- شريط التنبيهات -->
+  <div id="alert-box"></div>
+
+  <main>
+
+    <!-- قسم إضافة مادة -->
+    <section class="card">
+      <h2>إضافة مادة</h2>
+      <form id="subject-form">
+        <input type="text" id="subject-name" placeholder="اسم المادة" required>
+        <button type="submit">حفظ المادة</button>
+      </form>
+    </section>
+
+    <!-- قسم إضافة مهمة -->
+    <section class="card">
+      <h2>إضافة مهمة</h2>
+      <form id="task-form">
+        <input type="text" id="task-title" placeholder="اسم المهمة" required>
+        <select id="task-subject" required>
+          <option value="">اختر المادة</option>
+        </select>
+        <input type="date" id="task-date" required>
+        <input type="time" id="task-time" required>
+        <select id="task-remind">
+          <option value="10">تنبيه قبل 10 دقائق</option>
+          <option value="30" selected>تنبيه قبل 30 دقيقة</option>
+          <option value="60">تنبيه قبل ساعة</option>
+          <option value="1440">تنبيه قبل يوم</option>
+        </select>
+        <select id="task-priority">
+          <option value="عالية">أولوية عالية</option>
+          <option value="متوسطة" selected>أولوية متوسطة</option>
+          <option value="منخفضة">أولوية منخفضة</option>
+        </select>
+        <button type="submit">حفظ المهمة</button>
+      </form>
+    </section>
+
+    <!-- قسم مؤقت بومودورو -->
+    <section class="card" id="pomodoro">
+      <h2>⏱️ مؤقت المذاكرة</h2>
+      <div id="pomoTime">25:00</div>
+      <div id="pomoMode">وقت المذاكرة</div>
+      <button id="pomoStart">ابدأ</button>
+      <button id="pomoPause">إيقاف مؤقت</button>
+      <button id="pomoReset">إعادة</button>
+    </section>
+
+    <!-- قسم نسبة الإنجاز -->
+    <section class="card">
+      <h2>نسبة الإنجاز</h2>
+      <div id="progress"></div>
+    </section>
+
+    <!-- قسم عرض المهام -->
+    <section class="card">
+      <h2>المهام</h2>
+      <div id="filterBar">
+        <input type="text" id="searchBox" placeholder="🔍 ابحث عن مهمة أو مادة...">
+        <button class="filterBtn" data-filter="all">الكل</button>
+        <button class="filterBtn" data-filter="done">المنجز</button>
+        <button class="filterBtn" data-filter="late">المتأخر</button>
+      </div>
+      <div id="tasks-list"></div>
+      <button id="exportBtn"button
+    </section>
+
+  </main>
+
+  <!-- السكريبت لازم يكون في آخر الصفحة بعد كل العناصر -->
+  <script src="app.js"></script>
+</body>
+</html>
